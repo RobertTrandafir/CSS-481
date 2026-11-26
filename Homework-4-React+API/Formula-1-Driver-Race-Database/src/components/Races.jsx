@@ -9,11 +9,6 @@ function Races() {
   const [error, setError] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
 
-  // useEffect(() => {
-  //   // Load the current year's race sessions when the page first opens.
-  //   searchRaces('2026');
-  // }, []);
-
   async function searchRaces(selectedYear) {
     try {
       setLoading(true);

@@ -18,7 +18,7 @@ function Drivers() {
         const response = await fetch(`${API}/drivers?session_key=latest`);
         if (!response.ok) throw new Error('Could not load drivers. Please try again.');
         const data = await response.json();
-        // Remove duplicate driver entries in case the API returns repeated records.
+        // Remove duplicate drivers
         const uniqueDrivers = data.filter((driver, index, self) =>
           index === self.findIndex((item) => item.driver_number === driver.driver_number)
         );
